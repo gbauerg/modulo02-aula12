@@ -16,8 +16,10 @@ try:
   df_cvli = df_cvli.groupby('aisp', as_index=False)['cvli'].sum()
 
   df_cvli = df_cvli.sort_values(by='cvli', ascending=False)
+  
+  df_cvli['percentual %'] = (df_cvli['cvli'] / df_cvli['cvli'].sum()) * 100
 
-
+  print(df_cvli.head(10))
 except Exception as e:
   print(f'Erro ao obter dados: {e}')
 
