@@ -164,7 +164,7 @@ try:
 
   plt.subplot(2, 2, 3)
 
-  df_cvli_maiores_10 = (df_cvli_maiores.tail(10))
+  df_cvli_maiores_10 = (df_cvli_maiores.head(10))
   df_cvli_maiores_10["aisp"] = df_cvli_maiores_10["aisp"].astype(str)
 
   plt.barh(df_cvli_maiores_10['aisp'], df_cvli_maiores_10['cvli'])
